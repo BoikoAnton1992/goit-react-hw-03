@@ -1,0 +1,28 @@
+.mainContainer {
+  border: solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  overflow: hidden;
+  gap: 15px;
+  padding: 15px;
+}
+
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.addContactButton {
+  width: 110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.errorText {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
