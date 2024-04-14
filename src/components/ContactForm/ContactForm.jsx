@@ -2,6 +2,7 @@ import css from './ContactForm.module.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useId } from 'react';
 import * as Yup from 'yup';
+import { v4 as uuid } from 'uuid';
 
 const FeedbackSchema = Yup.object().shape({
   name: Yup.string()
@@ -18,13 +19,17 @@ const initialValues = {
   number: '',
 };
 
-export default function FeedbackForm() {
+export default function FeedbackForm({ onAdd }) {
   const nameFieldId = useId();
   const numberlFieldId = useId();
 
-  const handleSubmit = (values, actions) => {
-    console.log(values);
-    actions.resetForm();
+  const handleSubmit = (value, action) => {
+    onAdd({
+      id: uuid(),
+      name: value.name,
+      number: value.number,
+    });
+    action.resetForm();
   };
 
   return (
