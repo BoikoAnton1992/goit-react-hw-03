@@ -1,9 +1,7 @@
 .mainContainer {
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 300px;
   gap: 5px;
   padding-bottom: 25px;
 }
